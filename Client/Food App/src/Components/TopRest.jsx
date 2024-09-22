@@ -55,11 +55,11 @@ const TopRest = () => {
                 
                 className="mt-10 ml-32">
                     <Carousel responsive={responsive}>
-                        <div className="card card-compact bg-base-100 w-[17rem] shadow-xl h-[20rem]">
+                        <div className="card card-compact bg-base-100 w-[17rem] shadow-xl mb-5">
                             <figure>
                                 <img
                                     src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/7/16/c997ac50-07f4-4dff-b1d6-03ace6065734_14780.jpg"
-                                    alt="Shoes" />
+                                    alt="Shoes" className='h-44 w-52' />
                             </figure>
                             <div className="card-body">
                                 <h2 className="text-[1.3rem]  font-semibold">Pizza Hut</h2>
