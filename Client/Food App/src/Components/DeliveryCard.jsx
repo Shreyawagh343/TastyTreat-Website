@@ -138,21 +138,9 @@ const DeliveryCard = () => {
                         <button className="btn" onClick={() => document.getElementById('my_modal_3').showModal()}>Filter</button>
                     </div>
                     <div className="dropdown dropdown-bottom ml-4">
-                        <motion.div 
-                        
-                        initial={{ y: 200, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once: false }}
-                        transition={{
-                            delay: 0.3,
-                            y: { type: 'spring', stiffness: 60 },
-                            opacity: { duration: 0.2 },
-                            ease: "ease-out",
-                            duration: 1
-                        }}
-                        
-                        
-                        tabIndex={0} role="button" className="btn">Sort By</motion.div>
+                        <div 
+                    
+                        tabIndex={0} role="button" className="btn">Sort By</div>
                         <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[10] w-52 p-2 shadow">
                             <li><a className='text-[1rem]'>Relevance(Default) <span><input type="radio" name="default" id="default" className='ml-3' /></span> </a></li>
                             <li><a className='text-[1rem]'>Delivery Time  <span><input type="radio" name="default" id="default" className='ml-[2.7rem]' /></span> </a></li>
