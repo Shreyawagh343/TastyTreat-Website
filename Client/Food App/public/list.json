@@ -133,7 +133,7 @@
     },
     {
         "id":12,
-        "name":"Wow! China",
+        "name":"Happy China",
         "deliveryTime":"20-25 min",
         "price":90,
         "rating":4.0,
@@ -238,8 +238,5 @@
         "Menu":"Ice Cream",
         "address":"Ravet",
         "image":"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/10/2/6f49812a-d994-4b42-984f-4cf5d74f7a03_955706.jpg"
-    }
-    
-    
-    
+    }    
 ]
