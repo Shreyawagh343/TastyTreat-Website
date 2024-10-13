@@ -4,60 +4,97 @@ import List from "../../public/list.json";
 import Card from "./Card";
 
 const DeliveryCard = () => {
-    
-    const [sort, setsort] = useState(false);
-    const [rating, setrating] = useState(false);
-    const [del, setdel] = useState(false);
-    const [veg, setveg] = useState(false);
-    const [showRating,setshowRating] = useState(false);
-    
-    const showRatingFunct = () => {
-        const ratingComponent = document.querySelector(".rating2");
-        ratingComponent.addEventListener("click", () => {
-            setshowRating(true);
-        });
-    };
-    
-    const sorthandle = () => {
-        const sortComponent = document.querySelector(".sort");
-        sortComponent.addEventListener("click", () => {
-            setsort(true);
-            setrating(false);
-            setdel(false);
-            setveg(false);
-        });
-    };
-    
-    const rathandle = () => {
-        const rating = document.querySelector(".rating");
-        rating.addEventListener("click", () => {
-            setrating(true);
-            setsort(false);
-            setdel(false);
-            setveg(false);
-        });
-    };
-    
-    const delhandle = () => {
-        const delComponent = document.querySelector(".del");
-        delComponent.addEventListener("click", () => {
-            setdel(true);
-            setsort(false);
-            setrating(false);
-            setveg(false);
-        });
-    };
-    const veghandle = () => {
-        const vegComponent = document.querySelector(".veg");
-        vegComponent.addEventListener("click", () => {
-            setveg(true);
-            setsort(false);
-            setrating(false);
-            setdel(false);
-        });
-    };
-    const fliterRating = List.filter((data) =>
-      data.rating === 4.0);
+  const [sort, setsort] = useState(false);
+  const [rating, setrating] = useState(false);
+  const [del, setdel] = useState(false);
+  const [veg, setveg] = useState(false);
+  const [showRating3, setshowRating3] = useState(false);
+  const [showRating4, setshowRating4] = useState(false);
+  const [showRating5, setshowRating5] = useState(false);
+  const [Veg, setVeg] = useState(false);
+  const [nonVeg, setnonVeg] = useState(false);
+
+  const showRatingFunct = () => {
+    const ratingComponent = document.querySelector(".rating1");
+    ratingComponent.addEventListener("click", () => {
+      setshowRating3(true);
+      setshowRating4(false)
+      setshowRating5(false)
+    });
+  };
+  const showRatingFunct1 = () => {
+    const ratingComponent = document.querySelector(".rating2");
+    ratingComponent.addEventListener("click", () => {
+      setshowRating3(false);
+      setshowRating4(true)
+      setshowRating5(false)
+    });
+  };
+  const showRatingFunct2 = () => {
+    const ratingComponent = document.querySelector(".rating3");
+    ratingComponent.addEventListener("click", () => {
+      setshowRating3(false);
+      setshowRating4(false)
+      setshowRating5(true)
+    });
+  };
+  const showVeg = () => {
+    const ratingComponent = document.querySelector(".veg");
+    ratingComponent.addEventListener("click", () => {
+      setVeg(true)
+      setnonVeg(false)
+    });
+  };
+  const showNonVeg = () => {
+    const ratingComponent = document.querySelector(".nonVeg");
+    ratingComponent.addEventListener("click", () => {
+      setVeg(false)
+      setnonVeg(true)
+    });
+  };
+  const sorthandle = () => {
+    const sortComponent = document.querySelector(".sort");
+    sortComponent.addEventListener("click", () => {
+      setsort(true);
+      setrating(false);
+      setdel(false);
+      setveg(false);
+    });
+  };
+
+  const rathandle = () => {
+    const rating = document.querySelector(".rating");
+    rating.addEventListener("click", () => {
+      setrating(true);
+      setsort(false);
+      setdel(false);
+      setveg(false);
+    });
+  };
+
+  const delhandle = () => {
+    const delComponent = document.querySelector(".del");
+    delComponent.addEventListener("click", () => {
+      setdel(true);
+      setsort(false);
+      setrating(false);
+      setveg(false);
+    });
+  };
+  const veghandle = () => {
+    const vegComponent = document.querySelector(".veg");
+    vegComponent.addEventListener("click", () => {
+      setveg(true);
+      setsort(false);
+      setrating(false);
+      setdel(false);
+    });
+  };
+  const fliterRating = List.filter((data) => data.rating > 3.5);
+  const fliterRating1 = List.filter((data) => data.rating > 4);
+  const fliterRating2 = List.filter((data) => data.rating > 4.5);
+  const fliterVeg = List.filter((data) => data.category === "Veg");
+  const fliterNonVeg= List.filter((data) => data.category === "Veg/Non-Veg");
 
   return (
     <>
@@ -205,39 +242,44 @@ const DeliveryCard = () => {
                     </div>
                     <div className={`${rating ? "block" : "hidden"}`}>
                       <li className="list-none">
-                        <a className="rating1 text-[1.2rem] flex" >
+                        <a className="rating3 text-[1.2rem] flex">
                           <span>
                             <input
                               type="radio"
                               name="default"
                               id="default"
                               className="mr-6"
+                              onClick={showRatingFunct2}
                             />
                           </span>
                           4.5+ Rating
                         </a>
                       </li>
                       <li className="list-none">
-                        <a className="rating2 text-[1.2rem] flex" onClick={showRatingFunct}>
-                          <span>
-                            <input
-                              type="radio"
-                              name="default"
-                              id="default"
-                              className="mr-6" 
-                            />
-                          </span>
-                          4.0+ Rating
-                        </a>
-                      </li>
-                      <li className="list-none">
-                        <a className="text-[1.2rem] flex">
+                        <a
+                          className="rating2 text-[1.2rem] flex"
+                          onClick={showRatingFunct1}
+                        >
                           <span>
                             <input
                               type="radio"
                               name="default"
                               id="default"
                               className="mr-6"
+                            />
+                          </span>
+                          4.0+ Rating
+                        </a>
+                      </li>
+                      <li className="list-none">
+                        <a className="rating1 text-[1.2rem] flex">
+                          <span>
+                            <input
+                              type="radio"
+                              name="default"
+                              id="default"
+                              className="mr-6"
+                              onClick={showRatingFunct}
                             />
                           </span>
                           3.5+ Rating
@@ -261,26 +303,28 @@ const DeliveryCard = () => {
                     </div>
                     <div className={`${veg ? "block" : "hidden"}`}>
                       <li className="list-none">
-                        <a className="text-[1.2rem] flex">
+                        <a className="veg text-[1.2rem] flex">
                           <span>
                             <input
                               type="radio"
                               name="default"
                               id="default"
                               className="mr-6"
+                              onClick={showVeg}
                             />
                           </span>
                           Veg
                         </a>
                       </li>
                       <li className="list-none">
-                        <a className="text-[1.2rem] flex">
+                        <a className="nonVeg text-[1.2rem] flex">
                           <span>
                             <input
                               type="radio"
                               name="default"
                               id="default"
                               className="mr-6"
+                              onClick={showNonVeg}
                             />
                           </span>
                           Non-Veg
@@ -400,9 +444,49 @@ const DeliveryCard = () => {
             </div>
           </motion.div>
         </div>
-        <div className={`${showRating ? "block":"hidden"}`}>
-          {fliterRating.map((item)=>{
-             return <Card item={item}  key={item.id}/>
+        <div
+          className={`${
+            showRating3 ? "block" : "hidden"
+          } flex gap-9 ml-24 mt-10 flex-wrap`}
+        >
+          {fliterRating.map((item) => {
+            return <Card item={item} key={item.id} />;
+          })}
+        </div>
+        <div
+          className={`${
+            showRating4 ? "block" : "hidden"
+          } flex gap-9 ml-24 mt-10 flex-wrap`}
+        >
+          {fliterRating1.map((item) => {
+            return <Card item={item} key={item.id} />;
+          })} 
+        </div>
+        <div
+          className={`${
+            showRating5 ? "block" : "hidden"
+          } flex gap-9 ml-24 mt-10 flex-wrap`}
+        >
+          {fliterRating2.map((item) => {
+            return <Card item={item} key={item.id} />;
+          })}
+        </div>
+        <div
+          className={`${
+            Veg ? "block" : "hidden"
+          } flex gap-9 ml-24 mt-10 flex-wrap`}
+        >
+          {fliterVeg.map((item) => {
+            return <Card item={item} key={item.id} />;
+          })}
+        </div>
+        <div
+          className={`${
+           nonVeg ? "block" : "hidden"
+          } flex gap-9 ml-24 mt-10 flex-wrap`}
+        >
+          {fliterNonVeg.map((item) => {
+            return <Card item={item} key={item.id} />;
           })}
         </div>
       </div>

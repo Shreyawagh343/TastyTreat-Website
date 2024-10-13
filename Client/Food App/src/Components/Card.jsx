@@ -3,26 +3,13 @@ import React from "react";
 const Card = ({item}) => {
   return (
     <>
-      <div className="">
-        <div className="card bg-base-100 w-96 shadow-xl">
-          <figure>
-            <img
-              src={item.image} 
-              alt="Shoes"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">
-            {item.name}
-              <div className="badge badge-secondary">NEW</div>
-            </h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-              <div className="badge badge-outline">Fashion</div>
-              <div className="badge badge-outline">Products</div>
-            </div>
-          </div>
-        </div>
+      <div className="w-[19rem] h-[23rem]">
+        <img src={item.image} alt="" className="w-[80%] h-[50%] ml-[2rem] mt-5 rounded-md" />
+        <h1 className="ml-10 font-semibold text-xl mt-3">{item.name}</h1>
+        <p className="ml-10 font-semibold text-[1.1rem] mt-1">{item.rating} .  <span>{item.deliveryTime}</span></p>
+        <p className="ml-10 text-[1.1rem]">{item.Menu}</p>
+        <p className="ml-10 text-[1.1rem]">{item.address}</p>
+
       </div>
     </>
   );
