@@ -23,7 +23,7 @@ const TopRest = () => {
 
     return (
         <>
-            <div className="w-[85vw] ml-[3rem] ">
+            <div className="w-[85vw] ml-[3rem]  ">
                 <motion.h1
 
                     initial={{ y: 200, opacity: 0 }}
@@ -37,7 +37,7 @@ const TopRest = () => {
                         duration: 1
                     }}
 
-                    className='text-[1.7rem] md:ml-[8rem] font-bold mt-10'>Top restaurant</motion.h1>
+                className='text-[1.7rem] md:ml-[8rem]  font-bold mt-10'>Top restaurant</motion.h1>
                 <motion.div
                 
                 initial={{ y: 200, opacity: 0 }}
@@ -53,7 +53,7 @@ const TopRest = () => {
                 
                 
                 
-                className="mt-10 ml-32">
+                className="mt-10 ml-1 md:ml-32">
                     <Carousel responsive={responsive}>
                         <div className="card card-compact bg-base-100 w-[17rem] shadow-xl mb-5">
                             <figure>

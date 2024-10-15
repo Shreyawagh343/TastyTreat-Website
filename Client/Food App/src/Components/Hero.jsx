@@ -18,7 +18,7 @@ const Hero = () => {
             ease:"ease-in",
             duration:1
         }}
-        className='md:text-[3.4rem] text-[2.5rem]     font-bold text-white md:w-[35rem] w-[20rem] md:ml-[48rem] ml-[4rem] md:pt-[8rem] pt-[7rem]'>Savor the Flavors: Fresh Meals
+        className='md:text-[3.4rem] text-[2.5rem] font-bold text-white md:w-[35rem] w-[20rem] md:ml-[48rem] ml-[4rem] md:pt-[8rem] pt-[7rem]'>Savor the Flavors: Fresh Meals
         <span        
         className='md:text-red-500 text-white '> Delivered Fresh</span> </motion.h1>
         <motion.h1 

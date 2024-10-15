@@ -13,43 +13,49 @@ const DeliveryCard = () => {
   const [showRating5, setshowRating5] = useState(false);
   const [Veg, setVeg] = useState(false);
   const [nonVeg, setnonVeg] = useState(false);
+  const [defaultList, setdefaultList] = useState(true);
+  const [defaultMenu, setdefaultMenu] = useState(true);
 
   const showRatingFunct = () => {
     const ratingComponent = document.querySelector(".rating1");
     ratingComponent.addEventListener("click", () => {
       setshowRating3(true);
-      setshowRating4(false)
-      setshowRating5(false)
+      setshowRating4(false);
+      setshowRating5(false);
+      setdefaultMenu(false);
     });
   };
   const showRatingFunct1 = () => {
     const ratingComponent = document.querySelector(".rating2");
     ratingComponent.addEventListener("click", () => {
       setshowRating3(false);
-      setshowRating4(true)
-      setshowRating5(false)
+      setshowRating4(true);
+      setshowRating5(false);
+      setdefaultMenu(false);
     });
   };
   const showRatingFunct2 = () => {
     const ratingComponent = document.querySelector(".rating3");
     ratingComponent.addEventListener("click", () => {
       setshowRating3(false);
-      setshowRating4(false)
-      setshowRating5(true)
+      setshowRating4(false);
+      setshowRating5(true);
+      setdefaultMenu(false);
     });
   };
   const showVeg = () => {
     const ratingComponent = document.querySelector(".veg");
     ratingComponent.addEventListener("click", () => {
-      setVeg(true)
-      setnonVeg(false)
+      setVeg(true);
+      setnonVeg(false);
     });
   };
   const showNonVeg = () => {
     const ratingComponent = document.querySelector(".nonVeg");
     ratingComponent.addEventListener("click", () => {
-      setVeg(false)
-      setnonVeg(true)
+      setVeg(false);
+      setnonVeg(true);
+      setdefaultMenu(false);
     });
   };
   const sorthandle = () => {
@@ -59,6 +65,7 @@ const DeliveryCard = () => {
       setrating(false);
       setdel(false);
       setveg(false);
+      setdefaultList(false);
     });
   };
 
@@ -69,6 +76,7 @@ const DeliveryCard = () => {
       setsort(false);
       setdel(false);
       setveg(false);
+      setdefaultList(false);
     });
   };
 
@@ -79,6 +87,7 @@ const DeliveryCard = () => {
       setsort(false);
       setrating(false);
       setveg(false);
+      setdefaultList(false);
     });
   };
   const veghandle = () => {
@@ -88,13 +97,17 @@ const DeliveryCard = () => {
       setsort(false);
       setrating(false);
       setdel(false);
+      setdefaultList(false);
     });
   };
   const fliterRating = List.filter((data) => data.rating > 3.5);
   const fliterRating1 = List.filter((data) => data.rating > 4);
   const fliterRating2 = List.filter((data) => data.rating > 4.5);
   const fliterVeg = List.filter((data) => data.category === "Veg");
-  const fliterNonVeg= List.filter((data) => data.category === "Veg/Non-Veg");
+  const fliterNonVeg = List.filter((data) => data.category === "Non-Veg");
+
+
+
 
   return (
     <>
@@ -110,12 +123,12 @@ const DeliveryCard = () => {
             ease: "ease-out",
             duration: 1,
           }}
-          className="text-[1.7rem] md:ml-[10rem] font-bold mt-10"
+          className="text-[1.7rem] ml-[3rem] md:ml-[10rem] font-bold mt-10"
         >
           Restaurants with online food delivery
         </motion.h1>
 
-        <div className="mt-5 flex">
+        <div className="flex mt-5">
           <div className="md:ml-[10rem] ">
             <dialog id="my_modal_3" className="modal">
               <div className="modal-box">
@@ -173,6 +186,73 @@ const DeliveryCard = () => {
                     </li>
                   </div>
                   <div className="ml-10 bg-slate-100 pt-5  pl-10 pr-20 pb-10 ">
+                    <div className={`${defaultList ? "block" : "hidden"}`}>
+                      <li className="list-none">
+                        <a className="text-[1.2rem] flex">
+                          <span>
+                            <input
+                              type="radio"
+                              name="default"
+                              id="default"
+                              className="mr-6"
+                            />
+                          </span>
+                          Relevance(Default)
+                        </a>
+                      </li>
+                      <li className="list-none">
+                        <a className="text-[1.2rem] flex">
+                          <span>
+                            <input
+                              type="radio"
+                              name="default"
+                              id="default"
+                              className="mr-6"
+                            />
+                          </span>
+                          Delivery Time
+                        </a>
+                      </li>
+                      <li className="list-none">
+                        <a className="text-[1.2rem] flex">
+                          <span>
+                            <input
+                              type="radio"
+                              name="default"
+                              id="default"
+                              className="mr-6"
+                            />
+                          </span>
+                          Rating
+                        </a>
+                      </li>
+                      <li className="list-none">
+                        <a className="text-[1.2rem] flex">
+                          <span>
+                            <input
+                              type="radio"
+                              name="default"
+                              id="default"
+                              className="mr-6"
+                            />
+                          </span>
+                          Cost:Low to High
+                        </a>
+                      </li>
+                      <li className="list-none">
+                        <a className="text-[1.2rem] flex">
+                          <span>
+                            <input
+                              type="radio"
+                              name="default"
+                              id="default"
+                              className="mr-6"
+                            />
+                          </span>
+                          Cost:High to Low
+                        </a>
+                      </li>
+                    </div>
                     <div className={`${sort ? "block" : "hidden"}`}>
                       <li className="list-none">
                         <a className="text-[1.2rem] flex">
@@ -434,15 +514,24 @@ const DeliveryCard = () => {
               Fast Delivery
             </div>
             <div role="button" className="btn ml-4 ">
-              Rating{" "}
+              Rating
             </div>
-            <div role="button" className="btn ml-4 ">
+            <div role="button" className=" btn ml-4 ">
               Veg
             </div>
             <div role="button" className="btn ml-4 ">
               Non-veg
             </div>
           </motion.div>
+        </div>
+        <div
+          className={`${
+            defaultMenu ? "block" : "hidden"
+          } flex gap-9 ml-24 mt-10 flex-wrap`}
+        >
+         {fliterRating1.map((item) => {
+            return <Card item={item} key={item.id} />;
+          })}
         </div>
         <div
           className={`${
@@ -460,7 +549,7 @@ const DeliveryCard = () => {
         >
           {fliterRating1.map((item) => {
             return <Card item={item} key={item.id} />;
-          })} 
+          })}
         </div>
         <div
           className={`${
@@ -482,7 +571,7 @@ const DeliveryCard = () => {
         </div>
         <div
           className={`${
-           nonVeg ? "block" : "hidden"
+            nonVeg ? "block" : "hidden"
           } flex gap-9 ml-24 mt-10 flex-wrap`}
         >
           {fliterNonVeg.map((item) => {

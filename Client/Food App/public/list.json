@@ -4,9 +4,9 @@
         "name":"Subway",
         "deliveryTime":"30-40 min",
         "price":122,
-        "rating":3.9,
+        "rating":4.9,
         "delivery":"fast",
-        "category":"Veg/Non-Veg",
+        "category":"Veg",
         "Menu":"Healthy Food, Salads, Snacks, Desserts, Beverages",
         "address":"Tathawade",
         "image":"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/6/4/4fe8d129-44fd-469e-9eda-a1416a6dffcd_36014.JPG"
@@ -114,7 +114,7 @@
         "price":180,
         "rating":4.3,
         "delivery":"fast",
-        "category":"Non-Veg",
+        "category":"Veg/Non-Veg",
         "Menu":"Biryani, Mughlai, North Indian",
         "address":"Hinjawadi",
         "image":"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/ytwo1n5zaa7nplsnsryl"
@@ -162,7 +162,7 @@
         "price":240,
         "rating":4.5,
         "delivery":"fast",
-        "category":"Non-Veg",
+        "category":"Veg/Non-Veg",
         "Menu":"Biryani, North Indian, Awadhi",
         "address":"Hinjawadi",
         "image":"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/9/17/d309d3a0-b06d-4071-841d-a6686881958c_491975.jpg"
@@ -174,7 +174,7 @@
         "price":400,
         "rating":4.3,
         "delivery":"Not-fast",
-        "category":"Non-Veg",
+        "category":"Veg/Non-Veg",
         "Menu":"Arabian, Mughlai, North Indian, Biryani",
         "address":"Kondhwa",
         "image":"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/hrntfq8eocvjvsw9wmo4"
@@ -184,9 +184,9 @@
         "name":"Ancient Andhra",
         "deliveryTime":"20-25 min",
         "price":400,
-        "rating":3.5,
+        "rating":4.7,
         "delivery":"fast",
-        "category":"Non-Veg",
+        "category":"Veg/Non-Veg",
         "Menu":"Biryani, Hyderabadi, Mughlai, North Indian, Andhra",
         "address":"Hinjewadi",
         "image":"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/p4ccyziigdkgs4royptg"
@@ -198,7 +198,7 @@
         "price":150,
         "rating":4.3,
         "delivery":"fast",
-        "category":"Non-Veg",
+        "category":"Veg/Non-Veg",
         "Menu":"Arabian, Snacks, Chinese",
         "address":"Hinjewadi",
         "image":"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/9/23/0ebf031e-4130-43c5-9125-2c19b3101a63_726774.jpg"
@@ -220,7 +220,7 @@
         "name":"La Pino'z Pizza",
         "deliveryTime":"20-25 min",
         "price":230,
-        "rating":4.0,
+        "rating":4.8,
         "delivery":"fast",
         "category":"Veg/Non-Veg",
         "Menu":"Pizzas, Pastas, Italian, Desserts, Beverages",
