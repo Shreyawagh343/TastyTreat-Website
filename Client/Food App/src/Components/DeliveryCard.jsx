@@ -516,7 +516,7 @@ const DeliveryCard = () => {
             <div role="button" className="btn ml-4 ">
               Rating
             </div>
-            <div role="button" className=" btn ml-4 ">
+            <div role="button" className="btn ml-4 ">
               Veg
             </div>
             <div role="button" className="btn ml-4 ">
